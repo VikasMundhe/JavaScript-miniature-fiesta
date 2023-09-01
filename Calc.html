@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <script>
+            const handleClick = (num) =>{
+                document.form1.textview.value = document.form1.textview.value + num
+            }
+
+            const calculateTotal = () =>{
+                var exp = document.form1.textview.value;
+                document.form1.textview.value = eval(exp);
+            }
+        </script>
+    </head>
+
+    <body>
+        <form name = "form1">
+         <input name="textview">
+        </form>
+        <table>
+            <tr>
+                <td><button onclick="handleClick(1)">1</button></td>
+                <td><button>2</button></td>
+                <td><button >3</button></td>
+                <td><button>4</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="handleClick(5)">5</button></td>
+                <td><button>6</button></td>
+                <td><button >7</button></td>
+                <td><button>8</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="handleClick('+')">+</button></td>
+                <td><button>-</button></td>
+                <td><button >*</button></td>
+                <td><button onclick="calculateTotal()">=</button></td>
+            </tr>
+        </table>
+    </body>
+</html>
